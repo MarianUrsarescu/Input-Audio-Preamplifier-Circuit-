@@ -1,0 +1,166 @@
+
+**** 11/08/23 18:13:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Users\asus\Desktop\New folder\p1-pspicefiles\schematic1\sim2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/SPB_17.2/tools/capture/library/pspice/BC846B.lib" 
+* From [PSPICE NETLIST] section of C:\Users\asus\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 20ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source P1
+Q_Q1         N00260 N00241 N00237 QBC846B 
+Q_Q2         N00452 N00260 N02450 QBC846B 
+C_C1         N00196 N00241  1.8u  TC=0,0 
+V_V1         N00196 0  AC 200m
++SIN 0 200m 1k 0 0 0
+R_R1         0 N00196  60k TC=0,0 
+R_R3         0 N00237  1k TC=0,0 
+R_R2         N00260 VCC  200k TC=0,0 
+R_R4         VCC N00452 15k
+R_R5         N00460 0 1k
+R_R6         N00241 N00460 360k
+C_C2         N00452 N00617  15u  TC=0,0 
+C_C3         N00617 N00695  10u  TC=0,0 
+C_C4         0 N00460  200u  TC=0,0 
+R_R9         N00237 N01025  68k TC=0,0 
+R_R10         N01025 N00617  803k TC=0,0 
+C_C5         N00237 N01025  1.1n  TC=0,0 
+C_C6         N01025 N00617  3.87n  TC=0,0 
+R_P1         0 N00695  25k TC=0,0 
+V_V2         VCC 0 18Vdc
+R_R11         N00460 N02450  1k TC=0,0 
+
+**** RESUMING sim2.cir ****
+.END
+
+**** 11/08/23 18:13:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Users\asus\Desktop\New folder\p1-pspicefiles\schematic1\sim2.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QBC846B         
+               NPN             
+       LEVEL    1            
+          IS   18.220000E-15 
+          BF  324.4          
+          NF     .9932       
+         VAF   82            
+         IKF     .109        
+         ISE  289.400000E-18 
+          NE    1.4          
+          BR    8.29         
+          NR     .9931       
+         VAR   17.9          
+         IKR     .09         
+         ISC    9.982000E-12 
+          NC    1.763        
+         ISS    0            
+          RB   10            
+         RBM    5            
+         IRB    5.000000E-06 
+          RE     .649        
+          RC     .7014       
+         CJE   12.440000E-12 
+         VJE     .7579       
+         MJE     .3656       
+         CJC    3.347000E-12 
+         VJC     .5463       
+         MJC     .391        
+        XCJC     .6193       
+         CJS    0            
+         VJS     .75         
+         MJS     .333        
+          FC     .979        
+          TF  490.800000E-12 
+         XTF    9.51         
+         VTF    2.927        
+         ITF     .3131       
+          TR   90.000000E-09 
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 11/08/23 18:13:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Users\asus\Desktop\New folder\p1-pspicefiles\schematic1\sim2.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   18.0000  (N00196)    0.0000 (N00237)     .0775 (N00241)     .6474     
+
+(N00260)    2.0979 (N00452)    7.0020 (N00460)     .7352 (N00617)     .0775     
+
+(N00695)    0.0000 (N01025)     .0775 (N02450)    1.4706 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -8.127E-04
+
+    TOTAL POWER DISSIPATION   1.46E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/08/23 18:13:57 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Users\asus\Desktop\New folder\p1-pspicefiles\schematic1\sim2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .17
+

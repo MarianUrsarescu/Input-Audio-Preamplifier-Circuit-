@@ -1,0 +1,72 @@
+
+**** 11/19/23 18:34:17 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-siim1"  [ C:\Users\asus\Desktop\New folder\p1-pspicefiles\schematic1\siim1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "siim1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/SPB_17.2/tools/capture/library/pspice/BC846B.lib" 
+* From [PSPICE NETLIST] section of C:\Users\asus\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 0 100meg
+------------$
+ERROR(ORPSIM-16103): Invalid value
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source P1
+Q_Q1         N00260 N00241 N00237 QBC846B 
+Q_Q2         N00452 N00260 N00464 QBC846B 
+C_C1         N00196 N00241  4.7u  TC=0,0 
+V_V1         N00196 0  AC 5m
++SIN 0 5m 1k 0 0 0
+R_R11         N001741 N00196  47k TC=0,0 
+R_R3         0 N00237  1k TC=0,0 
+R_R21         N00260 N03355  100k TC=0,0 
+R_R4         VCC N00452 15k
+R_R5         N00464 0 1k
+R_R61         N00241 N07191 330k
+C_C22         N00452 N00617  4.7u  TC=0,0 
+C_C31         N00617 N00695  4.7u  TC=0,0 
+C_C41         0 N00464  10u  TC=0,0 
+R_R91         N00237 N06774  47k TC=0,0 
+R_R101         N01125 N06665  510k TC=0,0 
+C_C5         N00237 N01125  1.2n  TC=0,0 
+C_C6         N01125 N00617  4.4n  TC=0,0 
+V_V2         VCC 0 18Vdc
+R_R22         N03355 VCC  100k TC=0,0 
+C_C7         0 N03355  4.7u  TC=0,0 
+C_C42         0 N00464  10u  TC=0,0 
+R_R12         N060131 N001741  9.1k TC=0,0 
+R_R13         0 N060131  3.9k TC=0,0 
+R_R102         N00617 N06665  220k TC=0,0 
+R_R92         N01125 N06774  15k TC=0,0 
+R_R62         N07007 N07191  15k TC=0,0 
+R_R63         N00464 N07007  15k TC=0,0 
+C_C32         N00617 N00695  4.7n  TC=0,0 
+C_C21         N00452 N00617  4.7n  TC=0,0 
+C_C23         N00452 N00617  4.7n  TC=0,0 
+X_P1         0 0 N00695 POT PARAMS: SET=0.25 VALUE=100k
+
+**** RESUMING siim1.cir ****
+.END
+

@@ -1,0 +1,33 @@
+  Revised: Saturday, January 20, 2024
+          Revision: 
+
+
+
+
+
+
+
+Bill Of Materials        January 20,2024      23:26:44	Page1
+
+Item	Quantity	Reference	Part
+______________________________________________
+
+1	8	C1,C7,C22,C31,C41,C42,	4.7u
+		C43,C44
+2	1	C5	1n
+3	2	C61,C62	2.2n
+4	1	D1	LED
+5	4	TP1,TP2,VCC,GND	CON1
+6	2	OUT,IN	CON2
+7	3	P1,R21,R22	100k
+8	2	Q1,Q2	QBC846B
+9	2	R3,R5	1k
+10	4	R4,R62,R63,R92	15k
+11	2	R11,R91	47k
+12	1	R12	9.1k
+13	1	R13	3.9k
+14	1	R61	330k
+15	1	R101	510k
+16	1	R102	220k
+17	1	R111	1
+18	1	R112	220

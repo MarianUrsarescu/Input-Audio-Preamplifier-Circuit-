@@ -1,0 +1,61 @@
+
+**** 11/08/23 18:24:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim3"  [ C:\Users\asus\Desktop\New folder\P1-PSpiceFiles\SCHEMATIC1\sim3.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim3.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/SPB_17.2/tools/capture/library/pspice/BC846B.lib" 
+* From [PSPICE NETLIST] section of C:\Users\asus\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 1 1M
+-------------$
+ERROR(ORPSIM-16103): Invalid value
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source P1
+Q_Q1         N00260 N00241 N00237 QBC846B 
+Q_Q2         N00452 N00260 N02450 QBC846B 
+C_C1         N00196 N00241  1.8u  TC=0,0 
+V_V1         N00196 0  AC 200m
++SIN 0 200m 1k 0 0 0
+R_R1         0 N00196  60k TC=0,0 
+R_R3         0 N00237  1k TC=0,0 
+R_R2         N00260 VCC  200k TC=0,0 
+R_R4         VCC N00452 15k
+R_R5         N00460 0 1k
+R_R6         N00241 N00460 360k
+C_C2         N00452 N00617  15u  TC=0,0 
+C_C3         N00617 N00695  10u  TC=0,0 
+C_C4         0 N00460  200u  TC=0,0 
+R_R9         N00237 N01025  68k TC=0,0 
+R_R10         N01025 N00617  803k TC=0,0 
+C_C5         N00237 N01025  1.1n  TC=0,0 
+C_C6         N01025 N00617  3.87n  TC=0,0 
+R_P1         0 N00695  25k TC=0,0 
+V_V2         VCC 0 18Vdc
+R_R11         N00460 N02450  1k TC=0,0 
+
+**** RESUMING sim3.cir ****
+.END
+
